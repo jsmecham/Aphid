@@ -143,9 +143,6 @@ Aphid.UI.SplitViewController = Aphid.Class.create("Aphid.UI.SplitViewController"
     if (this.get("mode") || this.get("mode") != "default")
       this.get("element").addClassName(this.get("mode"));
 
-    if (Prototype.Browser.IE)
-      return; // Resizing is not supported by Internet Explorer, yet...
-
     if (this.get("allowsResize"))
     {
       this.get("element").addClassName("resizable");
@@ -230,7 +227,7 @@ Aphid.UI.SplitViewController = Aphid.Class.create("Aphid.UI.SplitViewController"
       var height = event.clientY - clickOffset;
       this.resizeHorizontal(height);
     }
-    
+
   },
 
   draggableDidFinishDragging: function(draggable, event)
@@ -424,7 +421,7 @@ Aphid.UI.SplitViewController = Aphid.Class.create("Aphid.UI.SplitViewController"
       }
 
       this._willResize();
-      
+
       var bottom = this.get("element").getHeight() - position;
 
       this.get("firstView.element").setStyle({ bottom: bottom + 'px' });
@@ -491,7 +488,7 @@ Aphid.UI.SplitViewController = Aphid.Class.create("Aphid.UI.SplitViewController"
         dragHandleHeight = this.get("dragHandle").getHeight();
         dragHandlePosition = position + borderHeight;
       }
-      
+
       this._willResize();
 
       var bottom = this.get("element").getHeight() - position;

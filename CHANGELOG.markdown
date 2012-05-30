@@ -3,7 +3,8 @@
 
 ## Version 0.9.4
 
- *
+ * [Aphid.Support.Compatibility] Removed all compatibility classes since we do
+   not care about legacy browsers anymore.
 
 ## Version 0.9.3 - May 30th, 2012
 

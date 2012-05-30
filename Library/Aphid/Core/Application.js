@@ -1,6 +1,6 @@
 /**
  * class Aphid.Core.Application < Aphid.Support.Object
- * 
+ *
  * Abstract class that should be subclassed by an application that wishes to
  * be managed by the Aphid framework.
  *
@@ -9,7 +9,7 @@
  * to bootstrap a new Aphid-based application instance.
  *
  * ### Usage Example
- * 
+ *
  *     var Application = Aphid.Class.create("Application", Aphid.Core.Application, {
  *       initialize: function($super)
  *       {
@@ -162,14 +162,6 @@ Aphid.Core.Application = Aphid.Class.create("Aphid.Core.Application", Aphid.Supp
  */
 Aphid.Core.Application.bootstrap = function()
 {
-
-  // If the user is running a blacklisted browser, redirect them to the
-  // "Browser Unsupported" page...
-  if (Prototype.Browser.IE6 || Prototype.Browser.IE7)
-  {
-    window.location.href = "Vendor/Aphid/Resources/Templates/Unsupported.html";
-    return;
-  }
 
   if (Object.isUndefined(Application))
   {

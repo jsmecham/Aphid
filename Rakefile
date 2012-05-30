@@ -10,11 +10,7 @@ WATCH_TASKS          = DEFAULT_TASKS
 WATCH_SOURCE_TASKS   = [ :build ]
 SOURCE_FILES         = [ "Library/Aphid.js", "Library/Aphid.Combined.js" ]
 DOCUMENTATION_SOURCE = "Library/Aphid.js"
-STYLESHEET_FILES     = [ "Resources/Stylesheets/Aphid.less",
-                         "Resources/Stylesheets/Aphid.IE.less",
-                         "Resources/Stylesheets/Aphid.IE7.less",
-                         "Resources/Stylesheets/Aphid.IE8.less",
-                         "Resources/Stylesheets/Aphid.IE9.less" ]
+STYLESHEET_FILES     = [ "Resources/Stylesheets/Aphid.less" ]
 
 # Documentation Tasks --------------------------------------------------------
 

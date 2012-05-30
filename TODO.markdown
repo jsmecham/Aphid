@@ -10,15 +10,6 @@
 
  * Copy all of the inline TODOs to TODO.markdown.
 
-## Compatibility
-
- * Add support for placeholders on block elements to IE and also automatically
-   strip out whitespace on elements with the data-placeholder attribute so that
-   the CSS rule will be applied on supporting browsers.
-
- * Add support for loading IE-specific CSS overrides via JavaScript so that
-   we no longer require the use of IE comment conditionals.
-
 ## Tools
 
  * Generating new Aphid applications with the "aphid new" command should

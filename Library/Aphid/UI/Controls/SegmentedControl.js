@@ -55,18 +55,10 @@ Aphid.UI.Controls.SegmentedControl = Aphid.Class.create("Aphid.UI.Controls.Segme
     // // Initialize Items from Select Element
     this._initializeStaticSegments();
 
-    // // Select Item
+    // Select Item
     // var selectedOption = this.selectElement.down("[selected]");
     // if (selectedOption && selectedOption.readAttribute("value"))
     //   this.select(selectedOption.readAttribute("value"));
-    // 
-    // // Prevent Text Selection (in Internet Explorer)
-    // if (Prototype.Browser.IE)
-    // {
-    //   this.element.onselectstart = function() { return false };
-    //   this.widgetElement.onselectstart = function() { return false };
-    //   this.listElement.onselectstart = function() { return false };
-    // }
   },
 
   // Original Select Box -----------------------------------------------------
@@ -161,34 +153,34 @@ Aphid.UI.Controls.SegmentedControl = Aphid.Class.create("Aphid.UI.Controls.Segme
   // setSegments: function(options)
   // {
   //   options = $A(options);
-  // 
+  //
   //   // Replace Placeholder
   //   this.get("widgetElement").update(this.get("placeholder"));
-  // 
+  //
   //   // Clear Selection
   //   this.set("selectedOption", false);
-  // 
+  //
   //   $L.info("Setting options to: " + options, this);
-  // 
+  //
   //   // Ensure that we are only passed instances of Aphid.UI.ListViewItem...
   //   if (!options.all(this._validateOption))
   //   {
   //     $L.error("All options must be instances of Aphid.UI.Controls.SelectViewOption!", this);
   //     return;
   //   }
-  // 
+  //
   //   // Reset Selection, Element and Items
   //   // this.clearSelection();
   //   this.get("listElement").update();
   //   this.options = $A();
-  // 
+  //
   //   // Add each item to the list
   //   options.each(this._addOption, this);
-  // 
+  //
   //   // Setup sorting
   //   // if (this.items.length > 0 && this.sortingEnabled)
   //   //   this._setupSorting();
-  // 
+  //
   //   return options;
   // },
 
@@ -217,7 +209,7 @@ Aphid.UI.Controls.SegmentedControl = Aphid.Class.create("Aphid.UI.Controls.Segme
   // {
   //   // Add Item to items Property
   //   this.get("options").push(option);
-  // 
+  //
   //   // Select Item
   //   // if (item.get("isSelected"))
   //   // {
@@ -235,23 +227,23 @@ Aphid.UI.Controls.SegmentedControl = Aphid.Class.create("Aphid.UI.Controls.Segme
   //   //     this.get("selectedItemIndexes").push(itemIndex);
   //   //   }
   //   // }
-  // 
+  //
   //   // Set listView on Item
   //   option.set("selectView", this);
-  // 
+  //
   //   // Set the sortIndex property on the item to its index in the items array
   //   // if (this.get("sortingEnabled"))
   //   //   item.set("sortIndex", this.get("items").indexOf(item));
-  // 
+  //
   //   // Add Item View to Subviews
   //   var listItemElement = option.toListItemElement();
   //   this.get("listElement").insert(listItemElement);
-  // 
+  //
   //   // Observe Item
   //   listItemElement.observe("click", this._handleClickEventOnListItem.bind(this));
   //   listItemElement.observe("mousemove", this._handleMouseMoveEventOnListItem.bind(this));
   //   listItemElement.observe("mouseout", this._handleMouseOutEventOnListItem.bind(this));
-  // 
+  //
   //   return option;
   // },
 

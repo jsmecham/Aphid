@@ -59,11 +59,6 @@ Aphid.UI.Controls.SelectView = Aphid.Class.create("Aphid.UI.Controls.SelectView"
   viewDidLoad: function()
   {
 
-    // TODO Internet Explorer 7 is not supported at this time, so return here
-    //      and make it use a native widget.
-    if (Prototype.Browser.IE7)
-      return;
-
     // Set the <select> element as the selectElement property
     this.set("selectElement", this.element);
 
@@ -107,13 +102,6 @@ Aphid.UI.Controls.SelectView = Aphid.Class.create("Aphid.UI.Controls.SelectView"
     if (selectedOption && selectedOption.readAttribute("value"))
       this.select(selectedOption.readAttribute("value"));
 
-    // Prevent Text Selection (in Internet Explorer)
-    if (Prototype.Browser.IE)
-    {
-      this.element.onselectstart = function() { return false; };
-      this.widgetElement.onselectstart = function() { return false; };
-      this.listElement.onselectstart = function() { return false; };
-    }
   },
 
   // Original Select Box -----------------------------------------------------
