@@ -15,7 +15,7 @@
  * take full advantage of the flexibility of those technologies while simply
  * assisting the developer in compartmentalizing the behavioral aspects of
  * their application.
- * 
+ *
 **/
 var Aphid = {
 
@@ -24,7 +24,7 @@ var Aphid = {
    *
    * The version number for Aphid in the *major.minor.build* format *(e.g. 1.0.123)*.
   **/
-  Version: '<%= APHID_VERSION %>'
+  Version: '0.9.4'
 
 };
 

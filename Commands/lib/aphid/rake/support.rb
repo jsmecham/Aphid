@@ -7,29 +7,31 @@ module Aphid
       # Sprocketize ------------------------------------------------------------
 
       def sprocketize(output, options = {})
-        sprockets_options = {
-          :root         => ROOT_PATH,
-          :asset_root   => "Build/Resources/Images",
-          :load_path    => [ "Library", "Application", "Vendor/Prototype/src", "Vendor/script.aculo.us/src" ],
-          :source_files => [ "Library/**/*.js", "Application/**/*.js" ]
-        }.merge(options)
-        puts "Sprocketizing #{sprockets_options[:source_files]} to #{output} ..."
-        sprockets = Sprockets::Secretary.new(sprockets_options)
-        sprockets.concatenation.save_to(output)
-        sprockets.install_assets
-      rescue => e
-        $FAILED = true
-        if $WATCHING and $GROWL
-          begin
-            $GROWL.notify "Build Failed", "#{PROJECT_NAME} Build Failed — Sprocketize",
-              "An error occurred while compiling JavaScripts with Sprockets:\n\n#{e.message}\n\nReference the console for more information…"
-          rescue Errno::ECONNREFUSED
-            puts "ERROR: Connection to Growl was refused. You must enable the options \"Listen for incoming notifications\" and \"Allow remote application registration\" in your Growl settings.\n\n"
+
+        sprockets = Sprockets::Environment.new(ROOT_PATH)
+        sprockets.append_path(ROOT_PATH)
+        sprockets.append_path("Library")
+        sprockets.append_path("Application")
+        sprockets.append_path("Vendor/JavaScripts")
+        sprockets.append_path("Vendor/Prototype/src")
+        sprockets.append_path("Vendor/script.aculo.us/src")
+
+        build_dir = Pathname(ROOT_PATH).join("Build")
+
+        options[:source_files].each do |bundle|
+          puts bundle.inspect
+          assets = sprockets.find_asset(bundle)
+          puts assets.inspect
+          prefix, basename = assets.pathname.to_s.split('/')[-2..-1]
+          FileUtils.mkpath build_dir.join(prefix)
+
+          assets.write_to(build_dir.join(prefix, basename))
+          assets.to_a.each do |asset|
+            # strip filename.css.foo.bar.css multiple extensions
+            realname = asset.pathname.basename.to_s.split(".")[0..1].join(".")
+            asset.write_to(build_dir.join(prefix, realname))
           end
         end
-        puts e
-        exit unless $WATCHING
-        false
       end
 
       # Lessify ----------------------------------------------------------------

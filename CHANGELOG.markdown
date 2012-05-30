@@ -3,6 +3,8 @@
 
 ## Version 0.9.4
 
+ * [Tools] Updated to support the latest Sprockets.
+
  * [Aphid.Support.Compatibility] Removed all compatibility classes since we do
    not care about legacy browsers anymore.
 
