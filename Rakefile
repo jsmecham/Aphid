@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-require 'rake/gempackagetask'
+require 'rubygems/package_task'
 require File.expand_path(File.dirname(__FILE__)) + "/Commands/lib/aphid/rake"
 
 PROJECT_NAME         = "Aphid"
@@ -141,7 +141,7 @@ end
 # Package Tasks --------------------------------------------------------------
 
 spec = eval(File.read("Aphid.gemspec"))
-Rake::GemPackageTask.new(spec) do |pkg|
+Gem::PackageTask.new(spec) do |pkg|
   pkg.need_zip    = true
   pkg.need_tar    = true
   pkg.package_dir = "Distribution"

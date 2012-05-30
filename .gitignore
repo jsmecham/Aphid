@@ -1,5 +1,6 @@
 *.pdoc.yaml
 *.tmproj
+*.sublime*
 .DS_Store
 .rake_tasks
 .rvmrc
