@@ -3,53 +3,54 @@
  *
  * Contains the base UI components (controls, views, etc) that comprise
  * typical Aphid-based applications.
+ *
+ *= require Aphid/UI/View
+ *= require Aphid/UI/Window
+ *= require Aphid/UI/ModalView
+ *
+ *= Controls -----------------------------------------------------------------
+ *
+ *= require Aphid/UI/Control
+ *= require Aphid/UI/Controls
+ *
+ * Controllers ---------------------------------------------------------------
+ *
+ *= require Aphid/UI/ViewController
+ *= require Aphid/UI/TabViewController
+ *= require Aphid/UI/SplitViewController
+ *= require Aphid/UI/NavigationController
+ *
+ * Views ---------------------------------------------------------------------
+ *
+ *= require Aphid/UI/ImageView
+ *= require Aphid/UI/PopoverView
+ *= require Aphid/UI/LoadingIndicatorView
+ *= require Aphid/UI/AlertView
+ *
+ * List View -----------------------------------------------------------------
+ *
+ *= require Aphid/UI/ListView
+ *= require Aphid/UI/ListViewItem
+ *
+ * Source List View ----------------------------------------------------------
+ *
+ *= require Aphid/UI/SourceListView
+ *= require Aphid/UI/SourceListViewItem
+ *= require Aphid/UI/DividerSourceListViewItem
+ *
+ * Token List View -----------------------------------------------------------
+ *
+ *= require Aphid/UI/TokenListView
+ *
+ * Matrix View ---------------------------------------------------------------
+ *
+ *= require Aphid/UI/MatrixView
+ *= require Aphid/UI/MatrixViewItem
+ *
+ * Calendar View -------------------------------------------------------------
+ *
+ *= require Aphid/UI/CalendarView
+ *
 **/
 
 Aphid.UI = {};
-
-//= require "UI/View"
-//= require "UI/Window"
-//= require "UI/ModalView"
-
-//= Controls -----------------------------------------------------------------
-
-//= require "UI/Control"
-//= require "UI/Controls"
-
-// Controllers ---------------------------------------------------------------
-
-//= require "UI/ViewController"
-//= require "UI/TabViewController"
-//= require "UI/SplitViewController"
-//= require "UI/NavigationController"
-
-// Views ---------------------------------------------------------------------
-
-//= require "UI/ImageView"
-//= require "UI/PopoverView"
-//= require "UI/LoadingIndicatorView"
-//= require "UI/AlertView"
-
-// List View -----------------------------------------------------------------
-
-//= require "UI/ListView"
-//= require "UI/ListViewItem"
-
-// Source List View ----------------------------------------------------------
-
-//= require "UI/SourceListView"
-//= require "UI/SourceListViewItem"
-//= require "UI/DividerSourceListViewItem"
-
-// Token List View -----------------------------------------------------------
-
-//= require "UI/TokenListView"
-
-// Matrix View ---------------------------------------------------------------
-
-//= require "UI/MatrixView"
-//= require "UI/MatrixViewItem"
-
-// Calendar View -------------------------------------------------------------
-
-//= require "UI/CalendarView"

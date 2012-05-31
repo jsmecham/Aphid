@@ -1,10 +1,9 @@
 /**
  * class Aphid.UI.MatrixView < Aphid.UI.ListView
  *
+ *= require Aphid/UI/MatrixViewItem
  *
 **/
-
-//= require <Aphid/UI/MatrixViewItem>
 
 Aphid.UI.MatrixView = Aphid.Class.create("Aphid.UI.MatrixView", Aphid.UI.ListView, {
 

@@ -8,7 +8,9 @@ module Aphid
 
       def sprocketize(output, options = {})
 
-        sprockets = Sprockets::Environment.new(ROOT_PATH)
+        sprockets = Sprockets::Environment.new(ROOT_PATH) # do |env|
+        #   env.logger = Logger.new(STDOUT)
+        # end
         sprockets.append_path(ROOT_PATH)
         sprockets.append_path("Library")
         sprockets.append_path("Application")
@@ -19,11 +21,11 @@ module Aphid
         build_dir = Pathname(ROOT_PATH).join("Build")
 
         options[:source_files].each do |bundle|
-          puts bundle.inspect
           assets = sprockets.find_asset(bundle)
-          puts assets.inspect
           prefix, basename = assets.pathname.to_s.split('/')[-2..-1]
           FileUtils.mkpath build_dir.join(prefix)
+
+          puts "Sprocketizing #{bundle} to #{build_dir.join(prefix, basename)} ..."
 
           assets.write_to(build_dir.join(prefix, basename))
           assets.to_a.each do |asset|
