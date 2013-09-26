@@ -8,7 +8,7 @@ ROOT_PATH            = File.expand_path(File.dirname(__FILE__))
 DEFAULT_TASKS        = [ :build, "docs:build" ]
 WATCH_TASKS          = DEFAULT_TASKS
 WATCH_SOURCE_TASKS   = [ :build ]
-SOURCE_FILES         = [ "Library/Aphid.js", "Library/Aphid.Combined.js" ]
+SOURCE_FILES         = [ "Library/Aphid.js", "Library/Aphid.Combined.js", "Library/Aphid.Documented.js" ]
 DOCUMENTATION_SOURCE = "Library/Aphid.js"
 STYLESHEET_FILES     = [ "Resources/Stylesheets/Aphid.less" ]
 

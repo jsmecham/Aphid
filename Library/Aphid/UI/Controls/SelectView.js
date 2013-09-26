@@ -15,10 +15,9 @@
  *  * `didSelectOption(option)` - Called when the specified option has been
  *    selected.
  *
- *= require Aphid/UI/Controls/SelectViewOption
- *
 **/
 
+//= require Aphid/UI/Controls/SelectViewOption
 
 Aphid.UI.Controls.SelectView = Aphid.Class.create("Aphid.UI.Controls.SelectView", Aphid.UI.View, {
 

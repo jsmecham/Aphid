@@ -16,16 +16,14 @@
  * assisting the developer in compartmentalizing the behavioral aspects of
  * their application.
  *
- *= require Aphid/Support
- *= require Aphid/Core
- *= require Aphid/Model
- *= require Aphid/UI
- *
- *= provide ../Resources/Images
- *
 **/
 
-//
+//= require Aphid/Support
+//= require Aphid/Core
+//= require Aphid/Model
+//= require Aphid/UI
+
+//= provide ../Resources/Images
 
 var Aphid = {
 

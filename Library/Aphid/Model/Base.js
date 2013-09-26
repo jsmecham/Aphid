@@ -39,9 +39,9 @@
  *  - `ModelWasDestroyedNotification`
  *  - `ModelFailureNotification`
  *
- *= require Aphid/Model/CollectionProxy
- *
 **/
+
+//= require Aphid/Model/CollectionProxy
 
 Aphid.Model.Base = Aphid.Class.create("Aphid.Model.Base", Aphid.Support.Object,
 {

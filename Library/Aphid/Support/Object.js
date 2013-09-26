@@ -1,10 +1,8 @@
 /**
  * class Aphid.Support.Object
- *
- *= require Aphid/Support/Properties
- *
 **/
 
+//= require Aphid/Support/Properties
 
 Aphid.Support.Object = Class.create({
 
